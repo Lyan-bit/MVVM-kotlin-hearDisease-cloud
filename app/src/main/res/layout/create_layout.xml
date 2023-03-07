@@ -1,0 +1,211 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="1"
+        tools:context=".fragments.CreateFragment" >
+        <!--Screen-->
+        <TableRow>
+            <TextView
+                android:id="@+id/aidLabel"
+                android:textStyle="bold"
+                android:background="#EEFFBB"
+                android:text="Id:" />
+
+            <EditText
+                android:id="@+id/idField"
+                android:layout_span="4" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/ageLabel"
+                android:textStyle="bold"
+                android:background="#EEFFBB"
+                android:text="Age:" />
+
+            <EditText
+                android:inputType="numberDecimal"
+                android:id="@+id/ageField"
+                android:layout_span="4" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/genderLabel"
+                android:textStyle="bold"
+                android:background="#EEFFBB"
+                android:text="Gender:" />
+
+            <EditText
+                android:inputType="numberDecimal"
+                android:id="@+id/genderField"
+                android:layout_span="4" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/chestPainLabel"
+                android:textStyle="bold"
+                android:background="#EEFFBB"
+                android:text="ChestPain:" />
+
+            <EditText
+                android:inputType="numberDecimal"
+                android:id="@+id/chestPainField"
+                android:layout_span="4" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/trestbpsLabel"
+                android:textStyle="bold"
+                android:background="#EEFFBB"
+                android:text="trestbps:" />
+
+            <EditText
+                android:inputType="numberDecimal"
+                android:id="@+id/trestbpsField"
+                android:layout_span="4" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/cholestoralLabel"
+                android:textStyle="bold"
+                android:background="#EEFFBB"
+                android:text="Cholestoral:" />
+
+            <EditText
+                android:inputType="numberDecimal"
+                android:id="@+id/cholestoralField"
+                android:layout_span="4" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/fbsLabel"
+                android:textStyle="bold"
+                android:background="#EEFFBB"
+                android:text="Fbs:" />
+
+            <EditText
+                android:inputType="numberDecimal"
+                android:id="@+id/fbsField"
+                android:layout_span="4" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/restecgLabel"
+                android:textStyle="bold"
+                android:background="#EEFFBB"
+                android:text="Restecg:" />
+
+            <EditText
+                android:inputType="numberDecimal"
+                android:id="@+id/restecgField"
+                android:layout_span="4" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/thalachLabel"
+                android:textStyle="bold"
+                android:background="#EEFFBB"
+                android:text="Thalach:" />
+
+            <EditText
+                android:inputType="numberDecimal"
+                android:id="@+id/thalachField"
+                android:layout_span="4" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/exangLabel"
+                android:textStyle="bold"
+                android:background="#EEFFBB"
+                android:text="Exang:" />
+
+            <EditText
+                android:inputType="numberDecimal"
+                android:id="@+id/exangField"
+                android:layout_span="4" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/oldPeakLabel"
+                android:textStyle="bold"
+                android:background="#EEFFBB"
+                android:text="OldPeak:" />
+
+            <EditText
+                android:inputType="numberDecimal"
+                android:id="@+id/oldPeakField"
+                android:layout_span="4" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/slopeLabel"
+                android:textStyle="bold"
+                android:background="#EEFFBB"
+                android:text="Slope:" />
+
+            <EditText
+                android:inputType="numberDecimal"
+                android:id="@+id/slopeField"
+                android:layout_span="4" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/caLabel"
+                android:textStyle="bold"
+                android:background="#EEFFBB"
+                android:text="Ca:" />
+
+            <EditText
+                android:inputType="numberDecimal"
+                android:id="@+id/caField"
+                android:layout_span="4" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/thalLabel"
+                android:textStyle="bold"
+                android:background="#EEFFBB"
+                android:text="Thal:" />
+
+            <EditText
+                android:inputType="numberDecimal"
+                android:id="@+id/thalField"
+                android:layout_span="4" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/resultLabel"
+                android:textStyle="bold"
+                android:background="#EEFFBB"
+                android:text="Result:" />
+
+            <TextView
+                android:id="@+id/result"
+                android:layout_span="4" />
+        </TableRow>
+        <TableRow>
+            <Button
+                android:id="@+id/diagnoseCreate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:background="#AAAAFF"
+                android:text="Save"
+                android:onClick="diagnoseCreate"/>
+            <Button
+                android:id="@+id/diagnoseCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="3"
+                android:background="#FFAAAA"
+                android:text="Cancel"
+                android:onClick="diagnoseCancel"/>
+        </TableRow>
+
+    </TableLayout>
+</ScrollView>
