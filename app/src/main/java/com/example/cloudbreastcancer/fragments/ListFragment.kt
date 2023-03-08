@@ -22,8 +22,6 @@ class ListFragment : Fragment() {
     private lateinit var myContext: Context
     private lateinit var model: HeartDiseaseCRUDViewModel
 
-    fun listBondFragment() {}
-
     companion object {
         const val ARG_COLUMN_COUNT = "column-count"
         fun newInstance(c: Context): ListFragment {
@@ -47,7 +45,6 @@ class ListFragment : Fragment() {
 
         if (view is RecyclerView) {
             val context = view.getContext()
-            val recyclerView = view
             if (mColumnCount <= 1) {
                 view.layoutManager = LinearLayoutManager(context)
             } else {
