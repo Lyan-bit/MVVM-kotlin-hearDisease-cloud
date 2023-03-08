@@ -32,7 +32,7 @@ class HeartDiseaseDAO {
         }
 
         fun isCached(id: String?): Boolean {
-            val x: HeartDisease = HeartDisease.HeartDiseaseIndex.get(id) ?: return false
+             HeartDisease.HeartDiseaseIndex.get(id) ?: return false
             return true
         }
 
@@ -45,26 +45,26 @@ class HeartDiseaseDAO {
             return null
         }
         val line1vals: ArrayList<String> = Ocl.tokeniseCSV(line)
-        var HeartDiseasex: HeartDisease? = HeartDisease.HeartDiseaseIndex.get(line1vals[14])
-        if (HeartDiseasex == null) {
-            HeartDiseasex = HeartDisease.createByPKHeartDisease(line1vals[14])
+        var heartDiseasex: HeartDisease? = HeartDisease.HeartDiseaseIndex.get(line1vals[14])
+        if (heartDiseasex == null) {
+            heartDiseasex = HeartDisease.createByPKHeartDisease(line1vals[14])
         }
-        HeartDiseasex.age = line1vals[0].toInt()
-        HeartDiseasex.sex = line1vals[1].toInt()
-        HeartDiseasex.cp = line1vals[2].toFloat()
-        HeartDiseasex.trestbps = line1vals[3].toInt()
-        HeartDiseasex.chol = line1vals[4].toInt()
-        HeartDiseasex.fbs = line1vals[5].toInt()
-        HeartDiseasex.restecg = line1vals[6].toInt()
-        HeartDiseasex.thalach = line1vals[7].toInt()
-        HeartDiseasex.exang = line1vals[8].toInt()
-        HeartDiseasex.oldpeak = line1vals[9].toInt()
-        HeartDiseasex.slope = line1vals[10].toInt()
-        HeartDiseasex.ca = line1vals[11].toInt()
-        HeartDiseasex.thal = line1vals[12].toInt()
-        HeartDiseasex.outcome = line1vals[13]
-        HeartDiseasex.id = line1vals[14]
-        return HeartDiseasex
+        heartDiseasex.age = line1vals[0].toInt()
+        heartDiseasex.sex = line1vals[1].toInt()
+        heartDiseasex.cp = line1vals[2].toFloat()
+        heartDiseasex.trestbps = line1vals[3].toInt()
+        heartDiseasex.chol = line1vals[4].toInt()
+        heartDiseasex.fbs = line1vals[5].toInt()
+        heartDiseasex.restecg = line1vals[6].toInt()
+        heartDiseasex.thalach = line1vals[7].toInt()
+        heartDiseasex.exang = line1vals[8].toInt()
+        heartDiseasex.oldpeak = line1vals[9].toInt()
+        heartDiseasex.slope = line1vals[10].toInt()
+        heartDiseasex.ca = line1vals[11].toInt()
+        heartDiseasex.thal = line1vals[12].toInt()
+        heartDiseasex.outcome = line1vals[13]
+        heartDiseasex.id = line1vals[14]
+        return heartDiseasex
     }
 
 
@@ -73,26 +73,26 @@ class HeartDiseaseDAO {
                 null
             } else try {
                 val id = obj.getString("id")
-                var HeartDiseasex: HeartDisease? = HeartDisease.HeartDiseaseIndex.get(id)
-                if (HeartDiseasex == null) {
-                    HeartDiseasex = HeartDisease.createByPKHeartDisease(id)
+                var heartDiseasex: HeartDisease? = HeartDisease.HeartDiseaseIndex.get(id)
+                if (heartDiseasex == null) {
+                    heartDiseasex = HeartDisease.createByPKHeartDisease(id)
                 }
-                HeartDiseasex.age = obj.getDouble("age").toInt()
-                HeartDiseasex.sex = obj.getDouble("sex").toInt()
-                HeartDiseasex.cp = obj.getDouble("cp").toFloat()
-                HeartDiseasex.trestbps = obj.getDouble("trestbps").toInt()
-                HeartDiseasex.chol = obj.getDouble("chol").toInt()
-                HeartDiseasex.fbs = obj.getDouble("fbs").toInt()
-                HeartDiseasex.restecg = obj.getDouble("restecg").toInt()
-                HeartDiseasex.thalach = obj.getDouble("thalach").toInt()
-                HeartDiseasex.exang = obj.getDouble("exang").toInt()
-                HeartDiseasex.oldpeak = obj.getDouble("oldpeak").toInt()
-                HeartDiseasex.slope = obj.getDouble("slope").toInt()
-                HeartDiseasex.ca = obj.getDouble("ca").toInt()
-                HeartDiseasex.thal = obj.getDouble("thal").toInt()
-                HeartDiseasex.outcome = obj.getString("outcome")
-                HeartDiseasex.id = obj.getString("id")
-                HeartDiseasex
+                heartDiseasex.age = obj.getDouble("age").toInt()
+                heartDiseasex.sex = obj.getDouble("sex").toInt()
+                heartDiseasex.cp = obj.getDouble("cp").toFloat()
+                heartDiseasex.trestbps = obj.getDouble("trestbps").toInt()
+                heartDiseasex.chol = obj.getDouble("chol").toInt()
+                heartDiseasex.fbs = obj.getDouble("fbs").toInt()
+                heartDiseasex.restecg = obj.getDouble("restecg").toInt()
+                heartDiseasex.thalach = obj.getDouble("thalach").toInt()
+                heartDiseasex.exang = obj.getDouble("exang").toInt()
+                heartDiseasex.oldpeak = obj.getDouble("oldpeak").toInt()
+                heartDiseasex.slope = obj.getDouble("slope").toInt()
+                heartDiseasex.ca = obj.getDouble("ca").toInt()
+                heartDiseasex.thal = obj.getDouble("thal").toInt()
+                heartDiseasex.outcome = obj.getString("outcome")
+                heartDiseasex.id = obj.getString("id")
+                heartDiseasex
             } catch (e: Exception) {
                 null
             }
@@ -175,26 +175,26 @@ class HeartDiseaseDAO {
                 val map = obj as HashMap<String, Object>
                 val id: String = map["id"].toString()
                 var HeartDiseasex: HeartDisease? = HeartDisease.HeartDiseaseIndex.get(id)
-                if (HeartDiseasex == null) {
-                    HeartDiseasex = HeartDisease.createByPKHeartDisease(id)
+                if (heartDiseasex == null) {
+                    heartDiseasex = HeartDisease.createByPKHeartDisease(id)
                 }
-                HeartDiseasex.age = (map["age"]as Long?)!!.toLong().toInt()
-                HeartDiseasex.sex = (map["sex"] as Long?)!!.toLong().toInt()
-                HeartDiseasex.cp = (map["cp"]as Long?)!!.toLong().toFloat()
-                HeartDiseasex.trestbps = (map["trestbps"] as Long?)!!.toLong().toInt()
-                HeartDiseasex.chol = (map["chol"]as Long?)!!.toLong().toInt()
-                HeartDiseasex.fbs = (map["fbs"] as Long?)!!.toLong().toInt()
-                HeartDiseasex.restecg = (map["restecg"]as Long?)!!.toLong().toInt()
-                HeartDiseasex.thalach = (map["thalach"] as Long?)!!.toLong().toInt()
-                HeartDiseasex.exang = (map["exang"]as Long?)!!.toLong().toInt()
+                heartDiseasex.age = (map["age"]as Long?)!!.toLong().toInt()
+                heartDiseasex.sex = (map["sex"] as Long?)!!.toLong().toInt()
+                heartDiseasex.cp = (map["cp"]as Long?)!!.toLong().toFloat()
+                heartDiseasex.trestbps = (map["trestbps"] as Long?)!!.toLong().toInt()
+                heartDiseasex.chol = (map["chol"]as Long?)!!.toLong().toInt()
+                heartDiseasex.fbs = (map["fbs"] as Long?)!!.toLong().toInt()
+                heartDiseasex.restecg = (map["restecg"]as Long?)!!.toLong().toInt()
+                heartDiseasex.thalach = (map["thalach"] as Long?)!!.toLong().toInt()
+                heartDiseasex.exang = (map["exang"]as Long?)!!.toLong().toInt()
 
-                HeartDiseasex.oldpeak = (map["oldpeak"]as Long?)!!.toLong().toInt()
-                HeartDiseasex.slope = (map["slope"]as Long?)!!.toLong().toInt()
-                HeartDiseasex.ca = (map["ca"]as Long?)!!.toLong().toInt()
-                HeartDiseasex.thal = (map["thal"]as Long?)!!.toLong().toInt()
-                HeartDiseasex.outcome = map["outcome"].toString()
-                HeartDiseasex.id = map["id"].toString()
-                return HeartDiseasex
+                heartDiseasex.oldpeak = (map["oldpeak"]as Long?)!!.toLong().toInt()
+                heartDiseasex.slope = (map["slope"]as Long?)!!.toLong().toInt()
+                heartDiseasex.ca = (map["ca"]as Long?)!!.toLong().toInt()
+                heartDiseasex.thal = (map["thal"]as Long?)!!.toLong().toInt()
+                heartDiseasex.outcome = map["outcome"].toString()
+                heartDiseasex.id = map["id"].toString()
+                return heartDiseasex
             } catch (e: Exception) {
                 return null
             }
