@@ -107,6 +107,7 @@ class HeartDiseaseDAO {
         for (item in rows.indices) {
             val row = rows[item]
             if (row == null || row.trim { it <= ' ' }.length == 0) {
+                //trim
             } else {
                 val x: HeartDisease? = parseCSV(row)
                 if (x != null) {
@@ -205,6 +206,7 @@ class HeartDiseaseDAO {
                 val ex: HeartDisease = es[i]
                 val jx = writeJSON(ex)
                 if (jx == null) {
+                    //null
                 } else {
                     try {
                         result.put(jx)
