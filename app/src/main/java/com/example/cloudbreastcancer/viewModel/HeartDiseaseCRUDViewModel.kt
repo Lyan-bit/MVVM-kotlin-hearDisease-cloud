@@ -16,13 +16,7 @@ class HeartDiseaseCRUDViewModel (context: Context): ViewModel() {
             return instance ?: HeartDiseaseCRUDViewModel(context)
         }
     }
-
-    /* This metatype code requires OclType.java, OclAttribute.java, OclOperation.java */
-    fun initialiseOclTypes() {
-        val heartDiseaseOclType: OclType = OclType.createByPKOclType("HeartDisease")
-        heartDiseaseOclType.setMetatype(HeartDisease::class.java)
-    }
-
+    
     private var currentHeartDisease: HeartDiseaseVO? = null
     private var currentHeartDiseases: ArrayList<HeartDiseaseVO> = ArrayList()
 
