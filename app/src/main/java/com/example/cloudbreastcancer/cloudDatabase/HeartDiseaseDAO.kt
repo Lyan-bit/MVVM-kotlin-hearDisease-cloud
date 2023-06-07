@@ -16,7 +16,7 @@ class HeartDiseaseDAO {
             if (command != null) {
                 res += command
             }
-            if (pars.size == 0) {
+            if (pars.isNotEmpty()) {
                 return res
             }
             res = "$res?"
@@ -32,12 +32,12 @@ class HeartDiseaseDAO {
         }
 
         fun isCached(id: String?): Boolean {
-             HeartDisease.HeartDiseaseIndex.get(id) ?: return false
+             HeartDisease.HeartDiseaseIndex[id] ?: return false
             return true
         }
 
         fun getCachedInstance(id: String): HeartDisease? {
-            return HeartDisease.HeartDiseaseIndex.get(id)
+            return HeartDisease.HeartDiseaseIndex[id]
         }
 
     fun parseCSV(line: String?): HeartDisease? {
@@ -45,7 +45,7 @@ class HeartDiseaseDAO {
             return null
         }
         val line1vals: ArrayList<String> = Ocl.tokeniseCSV(line)
-        var heartDiseasex: HeartDisease? = HeartDisease.HeartDiseaseIndex.get(line1vals[14])
+        var heartDiseasex: HeartDisease? = HeartDisease.HeartDiseaseIndex[line1vals[14]]
         if (heartDiseasex == null) {
             heartDiseasex = HeartDisease.createByPKHeartDisease(line1vals[14])
         }
@@ -73,7 +73,7 @@ class HeartDiseaseDAO {
                 null
             } else try {
                 val id = obj.getString("id")
-                var heartDiseasex: HeartDisease? = HeartDisease.HeartDiseaseIndex.get(id)
+                var heartDiseasex: HeartDisease? = HeartDisease.HeartDiseaseIndex[id]
                 if (heartDiseasex == null) {
                     heartDiseasex = HeartDisease.createByPKHeartDisease(id)
                 }
@@ -106,7 +106,7 @@ class HeartDiseaseDAO {
         val rows: ArrayList<String> = Ocl.parseCSVtable(lines)
         for (item in rows.indices) {
             val row = rows[item]
-            if (row == null || row.trim { it <= ' ' }.length == 0) {
+            if (row == null || row.trim { it <= ' ' }.isNotEmpty()) {
                 //trim
             } else {
                 val x: HeartDisease? = parseCSV(row)
@@ -174,7 +174,7 @@ class HeartDiseaseDAO {
             try {
                 val map = obj as HashMap<String, Object>
                 val id: String = map["id"].toString()
-                var heartDiseasex: HeartDisease? = HeartDisease.HeartDiseaseIndex.get(id)
+                var heartDiseasex: HeartDisease? = HeartDisease.HeartDiseaseIndex[id]
                 if (heartDiseasex == null) {
                     heartDiseasex = HeartDisease.createByPKHeartDisease(id)
                 }
