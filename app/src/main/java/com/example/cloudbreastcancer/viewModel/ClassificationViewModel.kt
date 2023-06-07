@@ -36,7 +36,7 @@ class ClassificationViewModel (context: Context): ViewModel() {
     }
 
     fun classify(classification: HeartDisease) : String {
-        var res = ""
+        var res : String
         lateinit var tflite : Interpreter
         lateinit var tflitemodel : ByteBuffer
 
