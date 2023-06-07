@@ -197,7 +197,7 @@ class HeartDiseaseBean(c: Context) {
 	        	errors.add("thal is not a Int")
 	        }
 
-	        return errors.size > 0
+	        return errors.isNotEmpty()
 	    }
 	    
 	    fun createHeartDisease() {
@@ -289,7 +289,7 @@ class HeartDiseaseBean(c: Context) {
 	        	errors.add("thal is not a Int")
 	        }
 
-       return errors.size > 0
+       return errors.isNotEmpty()
    }
        
    fun deleteHeartDisease() {
@@ -302,7 +302,7 @@ class HeartDiseaseBean(c: Context) {
 			 if (!allHeartDiseaseids.contains(id)) {
 			    errors.add("id" + checkParameter)
         }
-        return errors.size > 0
+        return errors.isNotEmpty()
 		}    
 
    	fun isSearchHeartDiseaseError(allHeartDiseaseages: List<String>): Boolean {
@@ -310,7 +310,7 @@ class HeartDiseaseBean(c: Context) {
         if (!allHeartDiseaseages.contains(age)) {
             errors.add("age" + checkParameter)
         }
-        return errors.size > 0
+        return errors.isNotEmpty()
     }
     
 		fun isSearchHeartDiseaseIdError(allHeartDiseaseIds: List<String>): Boolean {
@@ -318,7 +318,7 @@ class HeartDiseaseBean(c: Context) {
    	       if (!allHeartDiseaseIds.contains(id)) {
     	       errors.add("id" + checkParameter)
     	   }
-           return errors.size > 0
+           return errors.isNotEmpty()
     }
 
     fun errors(): String {
