@@ -15,7 +15,7 @@ class HeartDiseaseBean(c: Context) {
     private var sex = ""
     private var dsex = 0
     private var cp = ""
-    private var dcp = 0f
+    private var dcp = 0
     private var trestbps = ""
     private var dtrestbps = 0
     private var chol = ""
@@ -142,7 +142,7 @@ class HeartDiseaseBean(c: Context) {
 	        	errors.add("sex is not a Int")
 	        }
     try {
-	          dcp = cp.toFloat()
+	          dcp = cp.toInt()
 	        } catch (e: Exception) {
 	        	errors.add("cp is not a Int")
 	        }
@@ -234,7 +234,7 @@ class HeartDiseaseBean(c: Context) {
 	        	errors.add("sex is not a Int")
 	        }
     try {
-	          dcp = cp.toFloat()
+	          dcp = cp.toInt()
 	        } catch (e: Exception) {
 	        	errors.add("cp is not a Int")
 	        }
