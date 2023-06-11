@@ -27,21 +27,21 @@ class ClassificationRecyclerViewAdapter(items: List<HeartDiseaseVO>, listener: L
     // Displays data at a certain position
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.mItem = mValues[position]
-        holder.listClassificationoneView.text = " " + mValues[position].getId() + " "
-        holder.listClassificationtwoView.text = " " + mValues[position].getAge() + " "
-        holder.listClassificationthreeView.text = " " + mValues[position].getSex() + " "
-        holder.listClassificationfourView.text = " " + mValues[position].getCp() + " "
-        holder.listClassificationfiveView.text = " " + mValues[position].getTrestbps() + " "
-        holder.listClassificationsixView.text = " " + mValues[position].getChol() + " "
-        holder.listClassificationsevenView.text = " " + mValues[position].getFbs() + " "
-        holder.listClassificationeightView.text = " " + mValues[position].getRestecg() + " "
-        holder.listClassificationnineView.text = " " + mValues[position].getThalach() + " "
-        holder.listClassificationtenView.text = " " + mValues[position].getExang() + " "
-        holder.listClassificationelevnView.text = " " + mValues[position].getOldpeak() + " "
-        holder.listClassificationtwelveView.text = " " + mValues[position].getSlope() + " "
-        holder.listClassificationthirteenView.text = " " + mValues[position].getCa() + " "
-        holder.listClassificationfourteenView.text = " " + mValues[position].getThal() + " "
-        holder.listClassificationresultView.text = " " + mValues[position].getOutcome() + " "
+        holder.listClassificationoneView.text = " " + mValues[position].id + " "
+        holder.listClassificationtwoView.text = " " + mValues[position].age + " "
+        holder.listClassificationthreeView.text = " " + mValues[position].sex + " "
+        holder.listClassificationfourView.text = " " + mValues[position].cp + " "
+        holder.listClassificationfiveView.text = " " + mValues[position].trestbps + " "
+        holder.listClassificationsixView.text = " " + mValues[position].chol + " "
+        holder.listClassificationsevenView.text = " " + mValues[position].fbs + " "
+        holder.listClassificationeightView.text = " " + mValues[position].restecg + " "
+        holder.listClassificationnineView.text = " " + mValues[position].thalach + " "
+        holder.listClassificationtenView.text = " " + mValues[position].exang + " "
+        holder.listClassificationelevnView.text = " " + mValues[position].oldpeak + " "
+        holder.listClassificationtwelveView.text = " " + mValues[position].slope + " "
+        holder.listClassificationthirteenView.text = " " + mValues[position].ca + " "
+        holder.listClassificationfourteenView.text = " " + mValues[position].thal + " "
+        holder.listClassificationresultView.text = " " + mValues[position].outcome + " "
 
         holder.mView.setOnClickListener {
             mListener?.onListFragmentInteraction(holder.mItem)
