@@ -10,6 +10,7 @@ package com.example.cloudbreastcancer.viewModel; // Place in the relevant packag
 * *****************************/
 /* OCL library for Java version 8+ */
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Ocl {
