@@ -48,7 +48,7 @@ class HeartDiseaseCRUDViewModel (context: Context): ViewModel() {
     fun allHeartDiseaseids(): ArrayList<String> {
         val res: ArrayList<String> = ArrayList()
         for (x in currentHeartDiseases.indices) {
-            res.add(currentHeartDiseases[x].getId() + "")
+            res.add(currentHeartDiseases[x].id + "")
         }
         return res
     }
@@ -74,25 +74,25 @@ class HeartDiseaseCRUDViewModel (context: Context): ViewModel() {
     }
 
     fun editHeartDisease(x: HeartDiseaseVO) {
-        var obj = getHeartDiseaseByPK(x.getId())
+        var obj = getHeartDiseaseByPK(x.id)
         if (obj == null) {
-            obj = HeartDisease.createByPKHeartDisease(x.getId())
+            obj = HeartDisease.createByPKHeartDisease(x.id)
         }
-        obj.age = x.getAge()
-        obj.sex = x.getSex()
-        obj.cp = x.getCp()
-        obj.trestbps = x.getTrestbps()
-        obj.chol = x.getChol()
-        obj.fbs = x.getFbs()
-        obj.restecg = x.getRestecg()
-        obj.thalach = x.getThalach()
-        obj.exang = x.getExang()
-        obj.oldpeak = x.getOldpeak()
-        obj.slope = x.getSlope()
-        obj.ca = x.getCa()
-        obj.thal = x.getThal()
-        obj.outcome = x.getOutcome()
-        obj.id = x.getId()
+        obj.age = x.age
+        obj.sex = x.sex
+        obj.cp = x.cp
+        obj.trestbps = x.trestbps
+        obj.chol = x.chol
+        obj.fbs = x.fbs
+        obj.restecg = x.restecg
+        obj.thalach = x.thalach
+        obj.exang = x.exang
+        obj.oldpeak = x.oldpeak
+        obj.slope = x.slope
+        obj.ca = x.ca
+        obj.thal = x.thal
+        obj.outcome = x.outcome
+        obj.id = x.id
         cdb.persistHeartDisease(obj)
         currentHeartDisease = x
     }
