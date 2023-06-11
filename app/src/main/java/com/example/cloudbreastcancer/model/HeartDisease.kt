@@ -37,7 +37,7 @@ class HeartDisease {
     var id = ""  /* identity */
     var age = 0
     var sex = 0
-    var cp = 0f
+    var cp = 0
     var trestbps = 0
     var chol = 0
     var fbs = 0
