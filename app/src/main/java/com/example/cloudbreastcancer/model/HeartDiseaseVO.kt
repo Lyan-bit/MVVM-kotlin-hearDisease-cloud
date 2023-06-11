@@ -23,20 +23,21 @@ class HeartDiseaseVO  {
     	//constructor
     }
 
-    constructor(idx: String, 
-        agex: Int, 
-        sexx: Int, 
-        cpx: Int, 
-        trestbpsx: Int, 
-        cholx: Int, 
-        fbsx: Int, 
-        restecgx: Int, 
-        thalachx: Int, 
-        exangx: Int, 
-        oldpeakx: Int, 
-        slopex: Int, 
-        cax: Int, 
-        thalx: Int, 
+    constructor(
+        idx: String,
+        agex: Int,
+        sexx: Int,
+        cpx: Int,
+        trestbpsx: Int,
+        cholx: Int,
+        fbsx: Int,
+        restecgx: Int,
+        thalachx: Int,
+        exangx: Int,
+        oldpeakx: Int,
+        slopex: Int,
+        cax: Int,
+        thalx: Int,
         outcomex: String
         ) {
         this.id = idx
