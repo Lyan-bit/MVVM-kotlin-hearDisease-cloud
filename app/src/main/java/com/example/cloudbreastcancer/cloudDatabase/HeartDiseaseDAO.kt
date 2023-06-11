@@ -51,7 +51,7 @@ class HeartDiseaseDAO {
         }
         heartDiseasex.age = line1vals[0].toInt()
         heartDiseasex.sex = line1vals[1].toInt()
-        heartDiseasex.cp = line1vals[2].toFloat()
+        heartDiseasex.cp = line1vals[2].toInt()
         heartDiseasex.trestbps = line1vals[3].toInt()
         heartDiseasex.chol = line1vals[4].toInt()
         heartDiseasex.fbs = line1vals[5].toInt()
@@ -79,7 +79,7 @@ class HeartDiseaseDAO {
                 }
                 heartDiseasex.age = obj.getDouble("age").toInt()
                 heartDiseasex.sex = obj.getDouble("sex").toInt()
-                heartDiseasex.cp = obj.getDouble("cp").toFloat()
+                heartDiseasex.cp = obj.getDouble("cp").toInt()
                 heartDiseasex.trestbps = obj.getDouble("trestbps").toInt()
                 heartDiseasex.chol = obj.getDouble("chol").toInt()
                 heartDiseasex.fbs = obj.getDouble("fbs").toInt()
@@ -180,7 +180,7 @@ class HeartDiseaseDAO {
                 }
                 heartDiseasex.age = (map["age"]as Long?)!!.toLong().toInt()
                 heartDiseasex.sex = (map["sex"] as Long?)!!.toLong().toInt()
-                heartDiseasex.cp = (map["cp"]as Long?)!!.toLong().toFloat()
+                heartDiseasex.cp = (map["cp"]as Long?)!!.toLong().toInt()
                 heartDiseasex.trestbps = (map["trestbps"] as Long?)!!.toLong().toInt()
                 heartDiseasex.chol = (map["chol"]as Long?)!!.toLong().toInt()
                 heartDiseasex.fbs = (map["fbs"] as Long?)!!.toLong().toInt()
